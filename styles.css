@@ -19,7 +19,6 @@ body {
 header {
     background-color: rgba(4, 87, 32, 0.8);
     background: linear-gradient(to right, #000000, #045720);
-
     padding: .5rem;
     position: sticky;
     top: 0;
@@ -90,7 +89,8 @@ h2 {
     padding: 3rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5); /* Green shadow */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5);
+    /* box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); */
     color: white;
     margin-top: 4rem;
     position: relative;
@@ -109,11 +109,14 @@ h2 {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); */
 }
 
 .product:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5); /* Green shadow on hover */
+    /* box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5); */
+    /* box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
 }
 
 .product-image {
@@ -124,8 +127,8 @@ h2 {
     margin-bottom: 1rem;
     background-size: cover;
     background-position: center;
-    position: relative; /* To position the overlay */
-    overflow: hidden; /* Ensure the overlay does not overflow */
+    position: relative;
+    overflow: hidden;
 }
 
 .product-image .overlay {
@@ -144,14 +147,12 @@ h2 {
     transition: opacity 0.3s ease;
     text-align: center;
     padding: 1rem;
-    border-radius: 5px; /* Optional: round the overlay corners */
+    border-radius: 5px;
 }
 
 .product-image:hover .overlay {
     opacity: 1;
 }
-
-
 
 /* Adding images to each product */
 #cinnamon {
@@ -168,17 +169,6 @@ h2 {
 
 #herbs {
     background-image: url('images/alimento-green-chilli-powder-500x500.webp');
-}
-
-.cta {
-    background: linear-gradient(135deg, #000000, #045720);
-    padding: 3rem;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    color: white;
-    margin-top: 4rem;
-    position: relative;
 }
 
 .cta h2 {
@@ -268,6 +258,7 @@ h2 {
 [data-platform="pinterest"]:hover {
     color: #bd081c;
 }
+
 .contact-info {
     display: flex;
     justify-content: center;
@@ -320,7 +311,6 @@ h2 {
 footer {
     background-color: rgba(4, 87, 32, 0.8);
     background: linear-gradient(to right, #000000, #434343);
-
     padding: 1rem;
     text-align: center;
     color: white;
@@ -342,3 +332,268 @@ footer {
 .social-icon:hover {
     color: #045720;
 }
+
+/* Media Queries for Small Devices */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo p {
+        font-size: 0.7rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+        
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Space out links */
+    }
+
+    main {
+        padding: 1rem; /* Reduce padding on small devices */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Smaller heading */
+    }
+
+    .cta {
+        padding: 2rem; /* Adjust padding */
+    }
+
+    .cta h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .cta p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .products {
+        grid-template-columns: 1fr; /* Single column on small devices */
+    }
+
+    .product {
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    .social-icon {
+        width: 50px; /* Smaller social icons */
+        height: 50px;
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .contact-form {
+        max-width: 100%; /* Full width on small devices */
+        padding: 0 1rem; /* Add some padding */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem; /* Increase input padding */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Smaller footer text */
+    }
+}
+
+
+
+
+
+
+
+/* Base styles for larger screens */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+/* Hide the close button on large screens */
+.close-btn {
+    display: none;
+}
+
+/* Hamburger menu is hidden on large screens */
+.hamburger {
+    display: none;
+}
+
+/* Styles for the dropdown on small screens */
+@media (max-width: 768px) {
+    /* Override default nav styles on small devices */
+    nav ul {
+        position: fixed;
+        top: 50%;
+        right: -100%;
+        transform: translateY(-50%);
+        height: auto;
+        width: 100px; /* Compact width */
+        background-color: rgba(0, 0, 0, 0.85); /* Sleek semi-transparent background */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px; /* Rounded corners */
+        transition: right 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for modern look */
+        padding: 0.7rem;
+    }
+
+    /* When menu is open, slide it in from the right */
+    nav ul.open {
+        right: 1rem; /* Slide it smoothly */
+    }
+
+    /* Hamburger menu icon visible on small screens */
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem; /* Larger for modern look */
+        color: #fff;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .hamburger:hover {
+        color: #00ff99; /* Slight hover color for feedback */
+    }
+
+/* Close button becomes visible in the dropdown on small screens */
+    nav ul .close-btn {
+        display: block;
+        position: absolute;
+        top: -.5rem; /* Move the button slightly up */
+        right: 1rem;
+        font-size: 1.8rem; /* Slightly larger for emphasis */
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+        border-radius: 50%; /* Circular button */
+        padding: 0.5rem; /* Padding to make it look more clickable */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+        z-index: 2000; /* Ensure it's on top */
+    }
+
+    /* Add a shadow to give the button a floating effect */
+    nav ul .close-btn {
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+        box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3); /* Light green shadow */
+    }
+
+   /* Hover effect for the close button */
+    nav ul .close-btn:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Brighter background on hover */
+        transform: scale(1.2); /* Slightly grow when hovered */
+        color: #ff6347; /* Add a modern red tone to match other design */
+    }
+
+    /* Spacing and styling for links */
+    nav ul li {
+        margin: 0.5rem 0; /* Compact margin */
+        padding: 0.3rem 0;
+        width: 100%; /* Full width for better tap targets */
+        text-align: center;
+        border-radius: 5px; /* Rounded links */
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Modern link styles */
+    nav ul li a {
+        font-size: 0.9rem; /* Sleek font size */
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    /* Add hover effects for links */
+    nav ul li:hover {
+        background-color: #045720; /* Green background on hover */
+        transform: scale(1.05); /* Slight hover scale effect */
+    }
+
+    nav ul li a:hover {
+        color: #fff; /* Keep text white on hover */
+    }
+
+    /* Smoother spacing between the nav links */
+    nav ul li:not(:last-child) {
+        margin-bottom: 0.4rem;
+    }
+
+    /* Smaller font size for links */
+    nav ul li a {
+        font-size: 0.9rem; /* Slightly larger font size for readability */
+        color: white;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 80px; /* Adjust for smaller headers if needed */
+    }
+}
+
+
+/* For larger screens */
+html {
+    scroll-padding-top: 95px; /* Matches your header height */
+    /* scroll-snap-align: inherit; */
+}
+
+
+
+
+
+.info-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-btn {
+    background-color: #045720;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #003b1f;
+}
+
+.info-content {
+    display: none; /* Initially hidden */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0;
+    width: 200px; /* Set a width for the content */
+    z-index: 1000;
+    margin-top: 0.5rem;
+}
+
+.show {
+    display: block;
+}
+

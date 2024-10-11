@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Spices Co. - Bulk Quality Spices</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cta-gold.css">
 
      <!-- Link to Font Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+     
 </head>
 <body>
     <div id="bg-canvas"></div>
@@ -20,60 +24,89 @@
             </div>
         </div>
         <nav>
-            <ul>
+            <!-- Hamburger Menu Icon (shown only on small devices) -->
+            <div class="hamburger" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Navigation Links -->
+            <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Our Spices</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <span class="close-btn" onclick="closeNav()">&times;</span>
             </ul>
         </nav>
     </header>
+    
     <main>
-        <section id="home" class="cta"> 
+        <section id="home">
             <h2>Welcome to Premium Spices Co.</h2>
             <p>We specialize in providing high-quality, premium spices in bulk quantities for businesses that demand the very best. Our spices are sourced from the finest growers around the world, ensuring unparalleled flavor and freshness.</p>
         </section>
         
-        <section id="products" class="cta">
-            <h2>Our Premium Spices</h2>
-            <div class="products">
-                <div class="product">
-                    <div class="product-image" id="cinnamon">
-                        <div class="overlay">
-                            <h3>Premium Cinnamon</h3>
-                            <p>Rich, aromatic cinnamon perfect for bakeries and restaurants.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image" id="pepper">
-                        <div class="overlay">
-                            <h3>Gourmet Black Pepper</h3>
-                            <p>Intensely flavored black pepper for discerning chefs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image" id="saffron">
-                        <div class="overlay">
-                            <h3>Saffron Gold</h3>
-                            <p>The finest saffron threads for luxurious culinary creations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image" id="herbs">
-                        <div class="overlay">
-                            <h3>Artisanal Herb Blend</h3>
-                            <p>A proprietary blend of premium herbs for versatile use.</p>
-                        </div>
-                    </div>
+
+
+        <!-- <div class="info-container">
+            <button class="info-btn" id="infoBtn">Info</button>
+            <div class="info-content" id="infoContent">
+                <p>Here are the details you wanted! You can put more content here. Like fuck fuck fuck fuck thund kuth xxx threesome foursomw lickig sucking banging mia khalifa</p>
+                <a href="https://www.google.com" target="_blank" class="button" rel="noopener noreferrer">See Photo</a><br>
+                <a href="https://www.google.com" target="_blank" class="button" rel="noopener noreferrer">See Short</a><br>
+                <a href="https://www.google.com" target="_blank" class="button" rel="noopener noreferrer">See video</a><br>
+
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById('infoBtn').addEventListener('click', function () {
+                const infoContent = document.getElementById('infoContent');
+                infoContent.classList.toggle('show');
+            });
+        </script> -->
+
+        <section id="products" class="cta-g">
+    <h2>Our Premium Spices</h2>
+    <div class="products">
+        <div class="product">
+            <div class="product-image" id="cinnamon">
+                <div class="overlay">
+                    <h3>Premium Cinnamon</h3>
+                    <p>Rich, aromatic cinnamon perfect for bakeries and restaurants.</p>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="product">
+            <div class="product-image" id="pepper">
+                <div class="overlay">
+                    <h3>Gourmet Black Pepper</h3>
+                    <p>Intensely flavored black pepper for discerning chefs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image" id="saffron">
+                <div class="overlay">
+                    <h3>Saffron Gold</h3>
+                    <p>The finest saffron threads for luxurious culinary creations.</p>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-image" id="herbs">
+                <div class="overlay">
+                    <h3>Artisanal Herb Blend</h3>
+                    <p>A proprietary blend of premium herbs for versatile use.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         
         
-        <section id="about" class="cta">
+        <section id="about">
             <h2>About Us</h2>
             <p>Premium Spices Co. has been a trusted supplier of bulk, high-quality spices for over two decades. We work directly with spice farms to ensure the highest quality and freshest products for our clients. Our commitment to excellence has made us the go-to source for restaurants, food manufacturers, and gourmet retailers worldwide.</p>
         </section>
@@ -134,7 +167,8 @@
                     <span>Facebook</span>
                 </a>
                 <a href="#" target="_blank" class="social-icon" data-platform="twitter">
-                    <i class="fab fa-twitter"></i>
+                    <!-- <i class="fab fa-twitter"></i> -->
+                    <i class="">X</i>
                     <span>Twitter</span>
                 </a>
                 <a href="#" target="_blank" class="social-icon" data-platform="instagram">
@@ -153,15 +187,25 @@
                     <i class="fab fa-pinterest-p"></i>
                     <span>Pinterest</span>
                 </a>
+                <a href="#" target="_blank" class="social-icon" data-platform="youtube">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" target="_blank" class="social-icon" data-platform="pinterest">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Phone</span>
+                </a>
             </div>
         </section>
 
+
+        
 
 
 
     </main>
     <footer>
-        <p>&copy; 2023 Premium Spices Co. All rights reserved.</p>
+        <p>&copy; 2024 Premium Spices Co. All rights reserved.</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>

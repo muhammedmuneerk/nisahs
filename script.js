@@ -190,3 +190,27 @@ window.addEventListener('scroll', () => {
 // }
 
 // animate();
+
+
+function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+
+// Function to open the nav
+function openNav() {
+    document.getElementById("nav-links").classList.add("open");
+}
+
+// Function to close the nav
+function closeNav() {
+    document.getElementById("nav-links").classList.remove("open");
+}
+
+
+
+document.getElementById('infoBtn').addEventListener('click', function() {
+    const infoContent = document.getElementById('infoContent');
+    infoContent.classList.toggle('show');
+});

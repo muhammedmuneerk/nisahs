@@ -1,0 +1,56 @@
+.cta-g {
+    background: linear-gradient(135deg, #000000, #045720);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    /* box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5); */
+    /* box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); */
+    color: white;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.cta-g h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-g p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .cta-g {
+        padding: 2rem; /* Adjust padding */
+    }
+
+    .cta-g h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .cta-g p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #045720; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+.button:hover {
+    background-color: #003b1f; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.5); /* Shadow change on hover */
+}
+
