@@ -1,5 +1,7 @@
 .cta-g {
-    background: linear-gradient(135deg, #000000, #045720);
+    /* background: linear-gradient(135deg, #000000, #045720); */
+    /* background: linear-gradient(135deg, #000000, #ffffff); */
+    background: #000000;
     padding: 3rem;
     border-radius: 20px;
     text-align: center;

@@ -1,17 +1,17 @@
 // 3D Background
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+// const scene = new THREE.Scene();
+// const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('bg-canvas').appendChild(renderer.domElement);
+// renderer.setSize(window.innerWidth, window.innerHeight);
+// document.getElementById('bg-canvas').appendChild(renderer.domElement);
 
-function animate() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-}
+// function animate() {
+//     requestAnimationFrame(animate);
+//     renderer.render(scene, camera);
+// }
 
-animate();
+// animate();
 
 
 
@@ -114,21 +114,7 @@ products.forEach(product => {
 
 
 
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
 
-    // Here you would typically send this data to a server
-    console.log('Form submitted:', { name, email, message });
-
-    // Show a success message
-    alert('Thank you for your message! We will get back to you soon.');
-    contactForm.reset();
-});
 
 // Social media hover effect
 const socialIcons = document.querySelectorAll('.social-icon');

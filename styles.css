@@ -18,7 +18,7 @@ body {
 
 header {
     background-color: rgba(4, 87, 32, 0.8);
-    background: linear-gradient(to right, #000000, #045720);
+    background: radial-gradient(black, transparent);
     padding: .5rem;
     position: sticky;
     top: 0;
@@ -32,8 +32,8 @@ header {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    height: 75px;
 }
 
 .logo h1 {
@@ -79,17 +79,17 @@ section {
 }
 
 h2 {
-    color: #045720;
+    /* color: #045720; */
     border-bottom: 2px solid #045720;
     padding-bottom: 0.5rem;
 }
 
 .cta {
-    background: linear-gradient(135deg, #000000, #045720);
+    /* background: linear-gradient(135deg, #000000, #045720); */
     padding: 3rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5);
+    /* box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5); */
     /* box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); */
     color: white;
     margin-top: 4rem;
@@ -116,7 +116,7 @@ h2 {
     transform: translateY(-5px);
     /* box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5); */
     /* box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); */
-    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+    /* box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5); */
 }
 
 .product-image {
@@ -332,6 +332,131 @@ footer {
 .social-icon:hover {
     color: #045720;
 }
+
+
+
+/* MMK footer copyright */
+.animated-link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.animated-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 0;
+    background-color: #00ff00;
+    transition: width 0.4s ease-in-out;
+}
+
+.animated-link:hover {
+    color: #00ff00;
+}
+
+.animated-link:hover::after {
+    width: 100%;
+}
+
+
+
+
+/* contact form  */
+.form-section {
+    padding: 40px;
+    background-color: #1a1a1a; /* Dark background */
+    border: 1px solid #333; /* Darker border */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    color: white; /* Text color for better contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
+}
+
+.form-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #28a745; /* Green color for headers */
+}
+
+.form-section p {
+    margin-bottom: 20px;
+}
+
+.custom-contact-form input,
+.custom-contact-form textarea {
+    width: calc(100% - 20px); /* Adjust width to allow for right spacing */
+    padding: 15px;
+    margin: 10px 0; /* Keep top and bottom margins */
+    margin-left: -4px; /* Add left margin */
+    margin-right: 1px; /* Add more right margin for spacing */
+    border: none; /* Removing default border */
+    border-radius: 5px;
+    background-color: #333; /* Darker input background */
+    color: white; /* Text color in inputs */
+    transition: border 0.3s ease;
+}
+
+.custom-contact-form input:focus,
+.custom-contact-form textarea:focus {
+    outline: none;
+    border: 2px solid #28a745; /* Green border on focus */
+}
+
+#submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 30px; /* Ensure button also has right spacing */
+}
+
+#submit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.form-status {
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3; /* Light gray */
+    border-top: 5px solid #28a745; /* Green */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    color: #28a745; /* Green */
+}
+
+.error {
+    color: red;
+}
+
+
+
+
 
 /* Media Queries for Small Devices */
 @media (max-width: 768px) {
